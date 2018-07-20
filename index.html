@@ -11,10 +11,12 @@
 <body>
   <div id="app">
     <container>
-      <login-card>
-        <login-title></login-title>
+      <login-card error="{{  }}">
+        <login-title title="Login">{{ title }}</login-title>
         <br>
         <email-box></email-box>
+        <br>
+        <password-box></password-box>
         <br>
       </login-card>
     </container>
@@ -27,6 +29,7 @@
   <script src="component/login-card.js"></script>
   <script src="component/login-title.js"></script>
   <script src="component/email-box.js"></script>
+  <script src="component/password-box.js"></script>
   <script src="scripts/login.js"></script>
 
   
