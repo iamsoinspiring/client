@@ -8,16 +8,16 @@ var vm = new Vue({
   },
   methods: {
     userLogin() {
-      axios.post('http://35.240.248.109/register', {
-        // name: this.name
-        // email: this.email,
-        // password: this.password
+      axios.post('http://localhost:3000/users/register', {
+        name: this.name,
+        email: this.email,
+        password: this.password
       }, {})
       .then(response => {
         if (response.data.error) {
           // this.error = response.data.error
         } else {
-          window.location.href = 'http://iamsoinspiring.xendit.party/'
+          window.location.href = 'http://localhost:8080'
         }
       })
       .catch(err => {
