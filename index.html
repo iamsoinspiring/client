@@ -10,23 +10,25 @@
 </head>
 <body>
   <div id="app">
-    <div class="container">
-      <div class="card card-container">
-        <h5 style="align-self: center">Login</h5>
+    <container>
+      <login-card>
+        <login-title></login-title>
         <br>
-        <!-- <h5>{{ error }}</h5> -->
-        <input type="text" id="email" v-model="email" placeholder="Email address"><br>
-        <input type="password" id="password" v-model="password" placeholder="Password"><br>
-        <button class="btn btn-primary btn-block btn-signin" v-on:click="userLogin">Login</button><br>
-        <a href="http://localhost:8080/register.html" style="align-self: center"><small>Don't have an account? Click here</small></a>
-        <small style="align-self: center">{{ error }}</small>
-      </div>
-
-    </div>
+        <email-box></email-box>
+        <br>
+      </login-card>
+    </container>
+    
+ 
   </div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="component/container.js"></script>
+  <script src="component/login-card.js"></script>
+  <script src="component/login-title.js"></script>
+  <script src="component/email-box.js"></script>
   <script src="scripts/login.js"></script>
+
+  
 </body>
 </html>
