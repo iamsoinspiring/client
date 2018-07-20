@@ -10,7 +10,7 @@ Vue.component('login-card', {
     methods: {
         userLogin() {
             console.log(this.uname_email)
-            axios.post('http://localhost:3000/users/login', {
+            axios.post('http://35.240.248.109/users/login', {
               uname_email: this.uname_email,
               password: this.password
             }, {})

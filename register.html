@@ -11,21 +11,14 @@
 <body>
   <div id="app">
     <div class="container">
-      <div class="card card-container">
-        <h5 style="align-self: center">Register</h5>
-        <br>
-        <!-- <h5>{{ error }}</h5> -->
-        <input type="text" id="name" v-model="name" placeholder="Full name"><br>
-        <input type="text" id="email" v-model="email" placeholder="Email address"><br>
-        <input type="password" id="password" v-model="password" placeholder="Password"><br>
-        <button class="btn btn-primary btn-block btn-signin" v-on:click="userRegister">Register</button>
-      </div>
+      <register-card></register-card>
 
     </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="component/register-card.js"></script>
   <script src="scripts/register.js"></script>
 </body>
 </html>
