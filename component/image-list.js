@@ -20,7 +20,7 @@ Vue.component('image-list', {
     <div class="col-md-4" v-for="image in images">
       <div class="card">
         <a v-bind:href="image.url" download="test-image">
-          <img :src="image.url" alt="test-image" class="card-img-top" alt="test-image">
+          <img :src="image.url" class="card-img-top" alt="test-image">
         </a>
         <div class="card-body">
           <p class="card-text">{{ image.description }}</p>
