@@ -1,28 +1,30 @@
 var vm = new Vue({
   el: '#app',
   data: {
-    email: '',
+    uname_email: '',
     password: '',
-    error: null
+    error: ''
   },
   methods: {
     userLogin() {
-      axios.post('http://35.240.248.109/login', {
-        // email: this.email,
-        // password: this.password
+      axios.post('http://localhost:3000/users/login', {
+        uname_email: this.uname_email,
+        password: this.password
       }, {})
       .then(response => {
-        // let token = response.data.token // CHANGE SOON
+        let token = response.data.token // CHANGE SOON
         if (token) {
           localStorage.setItem('token', token)
-          window.location.href = "http://iamsoinspiring.xendit.party/dashboard.html"
+          window.location.href = "http://localhost:8080/dashboard.html"
         } else {
-          // this.error = response.data.error // CHANGE SOON
+          console.log('error', response.data)
+          this.error = response.data.error // CHANGE SOON
         }
       })
       .catch(err => {
-        console.log(err)
-        this.error = err
+        console.log(err.error)
+        // console.log(err)
+        this.error = 'Please put correct username / password'
       })
     }
   }
