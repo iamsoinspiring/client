@@ -18,7 +18,7 @@ Vue.component('login-card', {
               let token = response.data.token // CHANGE SOON
               if (token) {
                 localStorage.setItem('token', token)
-                window.location.href = "http://localhost:8080/dashboard.html"
+                window.location.href = "http://iamsoinspiring.xendit.party/dashboard.html"
               } else {
                 console.log('error', response.data)
                 this.error = response.data.error // CHANGE SOON

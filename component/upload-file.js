@@ -26,7 +26,7 @@ Vue.component('upload-file', {
         if (response) {
           console.log('success')
           console.log(response)
-          window.location.href = "http://localhost:8080/dashboard.html"
+          window.location.href = "http://iamsoinspiring.xendit.party/dashboard.html"
         }
       })
       .catch(err => {

@@ -18,7 +18,7 @@ Vue.component('register-card', {
       }, {})
       .then(response => {
         console.log(response);
-        window.location.href = "http://localhost:8080"
+        window.location.href = "http://iamsoinspiring.xendit.party"
       })
       .catch(err => {
         this.error = err.response.data
